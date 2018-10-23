@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -43,47 +43,81 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
+  //Defecto: HOME
+  .state('tab.home', {
+    url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-home': {
+        templateUrl: 'templates/tab-home.html'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  //COMBOS
+  .state('tab.combos', {
+      url: '/combos',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-combos': {
+          templateUrl: 'templates/tab-combos.html',
+          controller: 'combosCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    //DETALLE DEL COMBO: más informacion
+    .state('tab.combo-detalle', {
+      //Manda el id del combo seleccionado :comboId
+      url: '/combos/:comboId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-combo': {
+          templateUrl: 'templates/combo-detalle.html',
+          controller: 'comboDetalleCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  //COMANDAS - ORDENES
+  .state('tab.comanda', {
+    url: '/comanda',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-comanda': {
+        templateUrl: 'templates/tab-comanda.html',
+        controller: 'comandaCtrl'
+      }
+    }
+  })
+
+  //DETALLE ORDEN
+  .state('tab.comanda-detalle', {
+    url: '/comanda/:comandaId',
+    views: {
+      'tab-comanda': {
+        templateUrl: 'templates/comanda-detalle.html',
+        controller: 'comandaDetalleCtrl'
+      }
+    }
+  })
+
+  .state('tab.integrantes', {
+    url: '/integrantes',
+    views: {
+      'tab-integrantes': {
+        templateUrl: 'templates/tab-integrantes.html',
+        controller: 'integrantesCtrl'
+      }
+    }
+  })
+
+  .state('tab.integrantes-detalle', {
+    url: '/integrantes/:integranteId',
+    views: {
+      'tab-integrantes': {
+        templateUrl: 'templates/integrantes-detalle.html',
+        controller: 'integranteDetalleCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });

@@ -1,0 +1,11 @@
+<ion-view view-title="Combos">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="combo in combos" href="#/tab/combos/{{combos.id}}">
+        <img ng-src="{{combos.imagen}}">
+        <h2>{{combos.nombre}}</h2>
+        <p>$ {{combos.precio}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
