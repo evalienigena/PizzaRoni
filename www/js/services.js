@@ -12,8 +12,8 @@ angular.module('starter.services', [])
     },
     getIntegrante: function(id){
       return integrantes[id];
-    }
-  };
+    },
+  }
 })
 
 .factory('comboService', function(){
@@ -24,6 +24,7 @@ angular.module('starter.services', [])
     {id:3, nombre: 'Pizza Chiz', descripcion: 'Deliciosa Pizza de Queso, 12 porciones', precio: '12.99', imagen: 'img/combo3.jpg'},
     {id:4, nombre: 'Pizza Chiz', descripcion: 'Deliciosa Pizza de Queso, 12 porciones', precio: '12.99', imagen: 'img/combo3.jpg'}
   ]; 
+
   return {
     //Funcion que servirá para listar todos los combos
     //Devuelve todos los objetos del array
@@ -33,8 +34,8 @@ angular.module('starter.services', [])
     //Devuelve sólo un combo identificado por el parametro que le pasamos (id)
     getCombo: function(id){
       return combos[id];
-    }
-  };
+    },
+  }
 })
 
 .factory('comandaService', function(){
@@ -50,8 +51,8 @@ angular.module('starter.services', [])
     },
     getComanda: function(id){
       return comandas[id];
-    }
-  };
+    },
+  }
 });
 
 /*
