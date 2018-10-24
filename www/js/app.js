@@ -36,8 +36,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
+    //Un estado abstracto es basicamente un estado(vista) que nunca vemos, solo lo usamos como el "parent" de los "sub-views". Estos estados no pueden enlazarse.
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
@@ -48,7 +49,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/home',
     views: {
       'tab-home': {
-        templateUrl: 'templates/tab-home.html'
+        templateUrl: 'templates/tab-home.html',
+        controller: 'homeCtrl'
       }
     }
   })
@@ -66,11 +68,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     //DETALLE DEL COMBO: más informacion
     .state('tab.combo-detalle', {
       //Manda el id del combo seleccionado :comboId
-      url: '/combos/:comboId',
+      url: '/combos/:id',
       views: {
-        'tab-combo': {
+        'combo-detalle': {
           templateUrl: 'templates/combo-detalle.html',
-          controller: 'comboDetalleCtrl'
+          controller: 'comboCtrl'
         }
       }
     })
@@ -79,9 +81,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('tab.comanda', {
     url: '/comanda',
     views: {
-      'tab-comanda': {
-        templateUrl: 'templates/tab-comanda.html',
-        controller: 'comandaCtrl'
+      'tab-comandas': {
+        templateUrl: 'templates/tab-comandas.html',
+        controller: 'comandasCtrl'
       }
     }
   })
@@ -92,7 +94,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-comanda': {
         templateUrl: 'templates/comanda-detalle.html',
-        controller: 'comandaDetalleCtrl'
+        controller: 'comandaCtrl'
       }
     }
   })

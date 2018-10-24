@@ -5,22 +5,22 @@ angular.module('starter.controllers', [])
 
 //Envía todos los combos
 .controller('combosCtrl', function($scope, comboService){
-  $scope.itemsToShow = comboService.getCombos();
+  $scope.combos = comboService.getCombos();
 })
 
 //Envia el detalle del combo seleccionado
-.controller('combosDetalleCtrl', function($scope, $stateParams, comboService){
-  var comboId = $stateParams.comboId;
-  $scope.combo = comboService.getCombo(comboId);
+.controller('comboCtrl', function($scope, $stateParams, comboService){
+  var id = $stateParams.id;
+  $scope.combo = comboService.getCombo(id);
 })
 
 //Envia todas las comandas
-.controller('comandaCtrl', function($scope, comandaService){
+.controller('comandasCtrl', function($scope, comandaService){
   $scope.comandas = comandaService.getComandas();
 })
 
 //Envia el detalle de una comanda
-.controller('comandaDetalleCtrl', function($scope, $stateParams, comandaService){
+.controller('comandaCtrl', function($scope, $stateParams, comandaService){
   var comandaId = $stateParams.comandaId;
   $scope.comanda = comandaService.getComanda(comandaId);
 })

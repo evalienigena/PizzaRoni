@@ -1,23 +1,17 @@
-<ion-view view-title="Combos">
-  <ion-content>
-    <div class="item item-divider">
+<ion-view name="combo-detalle" view-title="Combos">
+  <ion-content class="padding">
+    <div class="list">
+      <a class="item item-thumbnail-left" ng-repeat="combo in combos" ui-sref="tab.combo-detalle({id: $index})">
+        <img src="{{combo.imagen}}">
+        <h2>{{combo.nombre}}</h2>
+        <p>{{combo.precio}}</p>
+        <p>{{$index}}</p>
+      </a>
     </div>
-    <ion-grid>
-      <ion-item ng-repeat="portray in itemsToShow" class="item item-text-wrap" style="padding: 0 !important">
-        <div class="row" style="padding:0">
-          <div class="col-40">
-            <img src="{{portray.imagen}}" height="100px" width="100px">
-          </div>  
-          <div class="col-60" style="padding:10px">
-            <label text-wrap>{{portray.nombre}}</label>
-            <p>{{portray.precio}}</p>
-          </div>
-        </div>
-      </ion-item>
-    </ion-grid>
   </ion-content>
 </ion-view>
-<!---
+
+<!--- OTRA FORMA:
 <ion-view view-title="Combos">
   <ion-content>
     <ion-list>
