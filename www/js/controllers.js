@@ -10,8 +10,8 @@ angular.module('starter.controllers', [])
 
 //Envia el detalle del combo seleccionado
 .controller('comboCtrl', function($scope, $stateParams, comboService){
-  var id = $stateParams.id;
-  $scope.combo = comboService.getCombo(id);
+  var comboid = $stateParams.id;
+  $scope.combo = comboService.getCombo(comboid);
 })
 
 //Envia todas las comandas

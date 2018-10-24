@@ -66,11 +66,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     //DETALLE DEL COMBO: más informacion
+    //Este estado actualizará la vista "tab-combos" cuando se seleccione un elemento del estado tab.combos
     .state('tab.combo-detalle', {
       //Manda el id del combo seleccionado :comboId
       url: '/combos/:id',
       views: {
-        'combo-detalle': {
+        'tab-combos': {
           templateUrl: 'templates/combo-detalle.html',
           controller: 'comboCtrl'
         }
@@ -89,10 +90,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   //DETALLE ORDEN
+  //Actualiza a tab-comandas
   .state('tab.comanda-detalle', {
     url: '/comanda/:comandaId',
     views: {
-      'tab-comanda': {
+      'tab-comandas': {
         templateUrl: 'templates/comanda-detalle.html',
         controller: 'comandaCtrl'
       }

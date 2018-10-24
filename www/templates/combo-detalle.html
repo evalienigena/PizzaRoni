@@ -1,12 +1,19 @@
-<ion-nav-view name="combodetalle">
-    <ion-view view-title="Detalle">
-        <ion-content class="padding">
-            <div ><img src="{{combo.imagen}}"></div>
-            <div class="card">
-                <div class="item item-divider">{{combo.nombre}}</div>
-                <div class="item item-text-wrap">{{combo.descripcion}}</div>
-                <div class="item item-divider">{{combo.precio}}</div>
+<ion-view name="combo-detalle" view-title="Detalle">
+    <ion-content class="padding">
+        <div><img class="miniatura center-image" src="{{combo.imagen}}"></div>
+        <div class="card">
+            <div class="item item-divider">
+                <h2 class="format">{{combo.nombre}}</p>
             </div>
-        </ion-content>
-    </ion-view>
-</ion-nav-view>
+            <div class="item item-text-wrap">
+                <p class="format">{{combo.descripcion}}</p>
+            </div>
+            <div class="item item-divider">
+                <label class="format">${{combo.precio}}</label>
+            </div>
+        </div>
+        <button class="button button-block button-balanced">
+                <h2 class="format padding-top" style="color: white;">Enviar Orden</h2>
+        </button>
+    </ion-content>
+</ion-view>

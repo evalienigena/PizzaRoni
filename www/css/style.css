@@ -1,1 +1,35 @@
-/* Empty. Add your own CSS if you like */
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans+Condensed:700');
+
+h2.format{  
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+label.format{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+p.format {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    /*padding-top: 5px;*/
+}
+
+div.padding-card{
+    padding-top: 25px;
+}
+
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.miniatura{
+    width: 150px;
+    height: 150px
+}

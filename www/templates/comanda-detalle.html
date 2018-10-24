@@ -1,0 +1,25 @@
+<ion-view name="comanda-detalle" view-title="Detalle de Orden #{{comanda.id}}">
+    <ion-content class="padding">
+        <div class="card">
+            <div class="item item-divider">
+                <h2 class="format">Orden #{{comanda.id}}</h2>
+            </div>
+            <div class="item item-text-wrap">
+                <h2 class="format" style="font-size: 16px;">Descripci&oacute;n:</h2>
+                <p class="format">{{comanda.descripcion}}</p>
+                <h2 class="format padding-top" style="font-size: 16px;">Registrado en: </h2>
+                <p class="format">{{comanda.registro}}</p>
+            </div>
+            <div class="row item item-divider">
+                <div class="col col-80">
+                    <h2 class="format" style="padding-left:2%;">Total:</h2>
+                </div>
+                <div class="col"><label class="format" style="font-size: 18px;">${{comanda.total}}</label></div>
+
+            </div>
+        </div>
+        <button class="button button-block button-assertive icon-right ion-ios-checkmark-outline">
+            <h2 class="format padding-top" style="color: white;">Despachar Orden</h2>
+        </button>
+    </ion-content>
+</ion-view>
