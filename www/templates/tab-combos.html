@@ -1,5 +1,25 @@
 <ion-view view-title="Combos">
   <ion-content>
+    <div class="item item-divider">
+    </div>
+    <ion-grid>
+      <ion-item ng-repeat="portray in itemsToShow" class="item item-text-wrap" style="padding: 0 !important">
+        <div class="row" style="padding:0">
+          <div class="col-40">
+            <img src="{{portray.imagen}}" height="100px" width="100px">
+          </div>  
+          <div class="col-60" style="padding:10px">
+            <label text-wrap>{{portray.nombre}}</label>
+            <p>{{portray.precio}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-grid>
+  </ion-content>
+</ion-view>
+<!---
+<ion-view view-title="Combos">
+  <ion-content>
     <ion-list>
       <ion-item class="item item-thumbnail-left" ng-repeat="combo in combos" href="#/tab/combos/{{combos.id}}">
         <img ng-src="{{combos.imagen}}">
@@ -9,3 +29,4 @@
     </ion-list>
   </ion-content>
 </ion-view>
+-->

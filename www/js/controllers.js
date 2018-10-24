@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 
 //Envía todos los combos
 .controller('combosCtrl', function($scope, comboService){
-  $scope.combos = comboService.getCombos();
+  $scope.itemsToShow = comboService.getCombos();
 })
 
 //Envia el detalle del combo seleccionado
