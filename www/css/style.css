@@ -50,3 +50,20 @@ div.padding-card{
     height: 280px;
     border-radius: 50%;
 }
+
+#logo, #local{
+    margin: auto;
+    padding: 5px 25px 5px 35px;
+}
+
+#logo{
+    width: 350px;
+    height: 300px;
+    padding: 5px 20px 5px 10px;
+}
+
+#local{
+    width: 350px;
+    height: 350px;
+    padding: 5px 20px 5px 10px;
+}
