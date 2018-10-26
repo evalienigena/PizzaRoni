@@ -1,0 +1,11 @@
+<ion-view name="tab-integrantes" view-title="Integrantes">
+    <ion-content>
+        <div class="list">
+            <a class="item item-avatar item-icon-right" ng-repeat="integrante in integrantes" ui-sref="tab.integrantes-detalle({integranteId: $index})">
+                <img src="{{integrante.imagen}}">
+                <h3 class="format">{{integrante.nombre}}</h3>
+                <p>{{integrante.carnet}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

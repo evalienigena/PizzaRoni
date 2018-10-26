@@ -1,10 +1,26 @@
-<ion-view view-title="Bienvenido">
+<ion-view name="tab-home" view-title="Bienvenido">
   <ion-content>
-    
-    <div style="padding: 0;">
-      <div style="background-color: black; padding: 0;">
-        <img src="img/bg-welcome.png" class="format-bg"></div>
-      <h1 class="bg-title">Pizzeria Roni</h1>
-      </div>
+    <div class="bar bar-header bar-assertive">
+      <h1 class="title">Equipo 3</h1>
+    </div>
+    <div class="divider"></div>
+    <br>
+    <ion-grid>
+      <ion-item ui-sref="tab.home-descripcion" class="item-text-wrap" style="padding:5 !important;" >
+          <div class="row">
+            <img src="img/Logo.jpeg" id="logo">
+          </div>
+          <div class="padding-card">
+            <h2 class="format">Bienvenido a la mejor pizzería de El Salvador, estamos para atenderte y servirte lo mejor posible.
+              <br>En los tabs inferiores puedes acceder a nuestros combos, así también revisar tus órdenes y visualizar información acerca de los desarrolladores.
+              ¡Es un gusto tenerte con nosotros!
+            </h2>
+            
+          </div>
+          <div class="row">
+            <img src="img/PizzaRoni.jpg" id="local">
+          </div>
+      </ion-item>
+    </ion-grid>
   </ion-content>
 </ion-view>
