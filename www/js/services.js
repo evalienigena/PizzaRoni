@@ -21,7 +21,14 @@ angular.module('starter.services', [])
   var combos = [
     {id:1, nombre: "Pizza Pepperoni", descripcion: 'Deliciosa pizza de 10 porciones con Pepperoni Deluxe', precio: '10.99', imagen: 'img/pepperoni.jpg'},
     {id:2, nombre: 'Pizza Suprema', descripcion: 'Incomparable Pizza Suprema de 12 porciones', precio: '12.99', imagen: 'img/suprema.jpg'},
-    {id:3, nombre: 'Pizza Chiz', descripcion: 'Deliciosa Pizza de Queso, 12 porciones', precio: '12.99', imagen: 'img/cheese.jpg'}
+    {id:3, nombre: 'Pizza Chiz', descripcion: 'Deliciosa Pizza de Queso, 12 porciones', precio: '12.99', imagen: 'img/cheese.jpg'},
+    {id:4, nombre: 'Pizza Hawaiiana', descripcion: 'Deliciosa Pizza Hawaiiana con jamón, 12 porciones', precio: '13.99', imagen: 'img/hawaiian-pizza.jpg'},
+    {id:5, nombre: 'Chicken & Bacon Pasta', descripcion: 'Clásica y deliciosa pasta con pollo rostizado y tocino', precio: '8.99', imagen: 'img/chicken-pasta-with-bacon.jpg'},
+    {id:6, nombre: 'Shrimp Pesto Pasta', descripcion: 'La clásica pesto pasta con frescos y deliciosos camarones', precio: '10.99', imagen: 'img/shrimp-pesto-pasta.jpg'},
+    {id:7, nombre: 'Ensalada con macaroni', descripcion: 'Riquísima ensalada con pepino, elote, tomates fritos, macaroni y pimientos rojos y verdes', precio: '7.99', imagen: 'img/pasta-salad.jpg'},
+    {id:8, nombre: 'Grilled Chicken Salad', descripcion: 'Riquísima ensalada de pollo a la parrilla con variedad de vegetales', precio: '7.99', imagen: 'img/grilled-chicken-salad.jpg'},
+    {id:9, nombre: 'Pan con ajo', descripcion: 'Orden de pan tostado con queso y ajo, incluye salsa casera de tomate', precio: '4.99', imagen: 'img/garlic-bread.jpg'},
+    {id:10, nombre: 'Cheese Sticks', descripcion: 'Orden de deditos de queso, incluye salsa casera de tomate', precio: '4.99', imagen: 'img/cheesesticks.jpg'},
   ]; 
 
   return {
@@ -53,54 +60,3 @@ angular.module('starter.services', [])
     },
   }
 });
-
-/*
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
-
-  return {
-    all: function() {
-      return chats;
-    },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
-    }
-  };
-});
-*/
