@@ -25,10 +25,12 @@ angular.module('starter.controllers', [])
   $scope.comanda = comandaService.getComanda(comandaId);
 })
 
+//Envia el detalle de los integrantes
 .controller('integrantesCtrl', function($scope, integranteService){
   $scope.integrantes = integranteService.getIntegrantes();
 })
 
+//Envía el detalle de cada integrante
 .controller('integranteDetalleCtrl', function($scope, $stateParams, integranteService){
   var alumno = $stateParams.integranteId;
   $scope.integrantes = integranteService.getIntegrante(alumno);
